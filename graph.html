@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>图形推理</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+body{font-family:"微软雅黑",sans-serif;max-width:800px;margin:0 auto;padding:15px;background:#f0f2f5;line-height:1.8;font-size:15px}
+h1{color:#1B3A5C;font-size:22px;border-bottom:3px solid #1B3A5C;padding-bottom:8px}h2{color:#2E86AB;margin:22px 0 10px;font-size:17px}h3{color:#333;margin:10px 0 5px;font-size:15px}
+.c{background:#fff;padding:14px;margin:10px 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0}th{background:#1B3A5C;color:#fff;padding:5px 8px;text-align:left}td{padding:5px 8px;border-bottom:1px solid #eee}
+.fm{background:#fffde7;padding:8px 12px;border-left:3px solid #e67e22;margin:6px 0;font-size:14px}
+.tp{background:#e8f5e9;padding:8px 12px;border-radius:6px;margin:6px 0;font-size:13px}
+b{color:#c0392b}nav{background:#1B3A5C;padding:8px 12px;border-radius:8px;margin-bottom:15px}nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:13px}
+</style></head><body>
+
+<nav><a href="index.html">🏠</a> <a href="speech.html">言语</a> <a href="logic.html">判断</a> <a href="graph.html">图推</a> <a href="quant.html">数量</a> <a href="data.html">资料</a> <a href="shortcut.html">秒杀</a></nav>
+
+<h1>📐 图形推理</h1>
+
+<div class="c">
+<h2>一、命题形式</h2>
+<table>
+<tr><th>形式</th><th>观察方法</th><th>规律寻找</th></tr>
+<tr><td>一组图</td><td>逐项推：①→②→③→④→⑤→?</td><td>相邻比较找规律</td></tr>
+<tr><td>一组图(间隔)</td><td>①→③→⑤，②→④→?</td><td>奇偶分开观察</td></tr>
+<tr><td>两组图</td><td>第一组①→②→③找规律，第二组④→⑤→?用规律</td><td></td></tr>
+<tr><td>九宫格</td><td>横行/竖行/米字/Z型</td><td>中间为?考虑米字</td></tr>
+<tr><td>分组分类</td><td>先找共性再找差异</td><td>第一眼看不出去看选项</td></tr>
+</table>
+</div>
+
+<div class="c">
+<h2>二、解题思维框架</h2>
+<table>
+<tr><th>元素特征</th><th>方向</th><th>具体内容</th></tr>
+<tr><td>组成<b>相同</b></td><td>位置规律</td><td>平移 / 旋转 / 翻转</td></tr>
+<tr><td>组成<b>相似</b></td><td>样式规律</td><td>遍历 / 加减同异 / 黑白运算</td></tr>
+<tr><td>组成<b>不同</b></td><td>属性规律</td><td>对称性 / 曲直性 / 开闭性</td></tr>
+<tr><td>组成<b>不同</b></td><td>数量规律</td><td>点 / 线 / 角 / 面 / 素</td></tr>
+</table>
+
+<h3>拆分思维</h3>
+<p>位置拆分：上下/内外/左右分开找规律</p>
+<p>样式拆分：横竖/黑白/曲直分开看</p>
+
+<h3>对比思维</h3>
+<p>对比选项（看不变） / 对比题干（看相邻）</p>
+</div>
+
+<div class="c">
+<h2>三、十五字口诀</h2>
+<div class="fm">
+<b>定性：屈臣氏整风</b><br>
+①<b>屈</b>——曲直性 ②<b>臣</b>——对称性 ③<b>氏</b>——相同相似图形 ④<b>整</b>——整体部分 ⑤<b>风</b>——封闭开放<br><br>
+什么时候考虑？<br>
+· 图形比较随意、生活化（阴影、简笔画等）<br>
+· 图形比较凌乱、有不协调图形<br><br>
+<b>定量：点线面角素</b><br>
+什么时候考虑？<br>
+· 图形越来越复杂，数量在增加，点线很多<br>
+· 图形规整且复杂
+</div>
+</div>
+
+<div class="c">
+<h2>四、位置规律</h2>
+<h3>平移</h3>
+<table>
+<tr><th>维度</th><th>类型</th></tr>
+<tr><td>方向</td><td>直线(上下/左右/斜对角线) / 绕圈(顺/逆时针)</td></tr>
+<tr><td>步数</td><td>固定 / 递增减(等差/等比)</td></tr>
+<tr><td>路径</td><td>从头(循环跑) / 调头(反弹跑)</td></tr>
+</table>
+
+<h3>整体看 vs 分开看</h3>
+<ul>
+<li>两个或多个黑块相连 → 看作一组</li>
+<li>黑块间隔白块数量恒定 → 看作一组</li>
+<li><b>就近原则</b>：最短移动距离为同一元素</li>
+<li>位置重合：个别图黑块减少</li>
+</ul>
+
+<h3>宫格型</h3>
+<p>中间不变 → 优先顺逆时针走外圈</p>
+<p>中间变化且有规律 → 内外圈分开看</p>
+<p>行数量不变 → 优先左右移动；列数量不变 → 优先上下移动</p>
+</div>
+
+<div class="c">
+<h2>五、样式规律</h2>
+<p><b>遍历</b>：每种元素在每个位置都出现一次</p>
+<p><b>加减同异</b>：相同部分保留/去掉</p>
+<p><b>黑白运算</b>：黑+白=? 按规则运算</p>
+</div>
+
+<div class="c">
+<h2>六、属性规律</h2>
+<h3>对称性</h3>
+<table>
+<tr><th>考查点</th><th>方法</th></tr>
+<tr><td>性质</td><td>轴对称/中心对称/轴+中心对称</td></tr>
+<tr><td>对称轴数量</td><td>恒定/交替/递增减/运算(加减乘除)</td></tr>
+<tr><td>对称轴方向</td><td>横/竖/斜/依次变化(顺逆时针旋转)</td></tr>
+<tr><td>对称轴+原图</td><td>经过的点/线/面数量/与原图线的关系</td></tr>
+</table>
+
+<h3>开闭性</h3>
+<p>开放(有缺口) / 封闭(整体封闭) / 半开半闭</p>
+
+<h3>曲直性</h3>
+<table>
+<tr><th>属性</th><th>情况</th></tr>
+<tr><td>性质</td><td>全直/全曲/曲+直</td></tr>
+<tr><td>数量</td><td>直线数/曲线数各自呈规律</td></tr>
+<tr><td>位置</td><td>上曲下直/内曲外直等</td></tr>
+</table>
+</div>
+
+<div class="c">
+<h2>七、笔画数（重点！）</h2>
+<div class="fm">
+<b>特征图</b>：五角星、圆相切/相交、「日」字变形、「田」字变形、出头端点<br><br>
+<b>一笔画</b>：奇点数=0或2 且 连在一起的图形<br><br>
+<b>多笔画</b>：笔画数 = 奇点数 ÷ 2<br><br>
+<b>奇点</b>：一个点引出的射线数为奇数<br><br>
+<b>龙飞一笔画</b>：去除封闭空间后，剩余几笔就是几笔画
+</div>
+</div>
+
+<div class="c">
+<h2>八、面</h2>
+<div class="fm">同时出现数面、数线、数笔画、数点的特征图时，<b>优先数面</b></div>
+<ul>
+<li>所有面：分开数三角形/四边形/多边形个数</li>
+<li>三角形可重复数！</li>
+<li>单个面：最大面的形状/面积/属性</li>
+</ul>
+</div>
+
+<div class="c">
+<h2>九、点/角/素</h2>
+<h3>点</h3>
+<p>大树叉、线条交叉明显、切点多、圆相交时考虑</p>
+<p>类型：圆点/交点/切点/出头点</p>
+
+<h3>角</h3>
+<div class="fm">口诀：折线折出多个角，留了缺口别忘角；横平竖直多垂直，直角数量来试试</div>
+<p>只数小于180°的角；直线与直线相交才叫角</p>
+
+<h3>素</h3>
+<p>特征：很多小元素 / 生活化图形 / 黑色粗线条</p>
+<p>考查：总数/个别种类数量/种类间运算/元素间换算</p>
+</div>
+
+<div class="c">
+<h2>十、空间类</h2>
+<h3>六面体展开图</h3>
+<div class="fm">
+<b>相对面</b>：同行/同列隔一面 / Z两端 → 不能同时出现<br>
+<b>公共边</b>：①构成直角的两条边 ②一列连着4个面，最两侧两条边 ③3+1的L型同方向两条边<br><br>
+<b>三板斧</b>：①对立面(13/24/56不同时出现) ②14直接平移四格不变 ③56平移两格(中心对称直接平移)
+</div>
+
+<h3>截面图</h3>
+<table>
+<tr><th>几何体</th><th>能截出</th><th>不能截出</th></tr>
+<tr><td>六面体</td><td>三角形(锐角)/四边形/五边形/六边形</td><td>正五边形/直角梯形</td></tr>
+<tr><td>圆柱体</td><td>圆/椭圆/矩形/抛物线</td><td>梯形</td></tr>
+</table>
+
+<h3>三视图</h3>
+<p>长对正、高平齐、宽相等。曲面平滑交接无线。原图有线就有线。</p>
+
+<h3>立体拼合</h3>
+<p>分层画图法：化立体为平面、化拼为拆</p>
+</div>
+
+<div class="c">
+<h2>十一、特殊题型</h2>
+<h3>黑白块</h3>
+<ul>
+<li>对称性（整体/黑/白部分对称）</li>
+<li>面（黑面积=白面积）</li>
+<li>连接（部分数/笔画数/连接方式）</li>
+<li>相邻比较（按行按列对比）</li>
+</ul>
+
+<h3>数字规律</h3>
+<table>
+<tr><th>属性</th><th>数字</th></tr>
+<tr><td>曲直</td><td>全曲：0,3,6,8,9 / 全直：1,4,7 / 曲+直：2,5</td></tr>
+<tr><td>开闭</td><td>开放：1,2,3,5,7 / 全闭：0,8 / 半闭：4,6,9</td></tr>
+<tr><td>封闭面</td><td>0个：1,2,3,5,7 / 1个：0,4,6,9 / 2个：8</td></tr>
+</table>
+
+<h3>字母规律</h3>
+<table>
+<tr><th>属性</th><th>字母</th></tr>
+<tr><td>轴对称</td><td>A,B,C,D,E,H,I,K,M,O,T,U,V,W,X,Y</td></tr>
+<tr><td>中心对称</td><td>N,S,Z</td></tr>
+<tr><td>全曲</td><td>C,O,S,U</td></tr>
+<tr><td>全直</td><td>A,E,F,H,I,K,L,M,N,T,V,W,X,Y,Z</td></tr>
+<tr><td>曲+直</td><td>B,D,G,J,P,Q,R</td></tr>
+<tr><td>全闭</td><td>B,D,O,P,Q,R</td></tr>
+</table>
+</div>
+
+</body></html>
