@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>数量关系</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+body{font-family:"微软雅黑",sans-serif;max-width:800px;margin:0 auto;padding:15px;background:#f0f2f5;line-height:1.8;font-size:15px}
+h1{color:#1B3A5C;font-size:22px;border-bottom:3px solid #1B3A5C;padding-bottom:8px}h2{color:#2E86AB;margin:22px 0 10px;font-size:17px}h3{color:#333;margin:10px 0 5px;font-size:15px}
+.c{background:#fff;padding:14px;margin:10px 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0}th{background:#1B3A5C;color:#fff;padding:5px 8px;text-align:left}td{padding:5px 8px;border-bottom:1px solid #eee}
+.fm{background:#fffde7;padding:8px 12px;border-left:3px solid #e67e22;margin:6px 0;font-size:14px}
+b{color:#c0392b}nav{background:#1B3A5C;padding:8px 12px;border-radius:8px;margin-bottom:15px}nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:13px}
+</style></head><body>
+
+<nav><a href="index.html">🏠</a> <a href="speech.html">言语</a> <a href="logic.html">判断</a> <a href="graph.html">图推</a> <a href="quant.html">数量</a> <a href="data.html">资料</a> <a href="shortcut.html">秒杀</a></nav>
+
+<h1>🔢 数量关系</h1>
+<p style="color:#888;font-size:12px">目标：15题 · 10-15分钟 · 60%正确率（随缘模块）</p>
+
+<div class="c"><h2>一、鸡兔同笼</h2><div class="fm">假设都做对或都赚到<br><b>做错数量 = (理想情况 - 现实情况) ÷ 单个差值</b><br><br>例：获胜5分/打平2分/失败-1分，20场积61分3场平<br>理想：17场全胜=85分 → 失败=(85-55)/(5-(-1))=5 → 胜12场，胜率60%</div></div>
+
+<div class="c"><h2>二、浓度问题</h2><div class="fm"><b>公式</b>：浓度 = 溶质 ÷ 溶液<br><b>溶质不变法</b>：无论溶液如何改变，溶质不改变<br><br><b>十字相乘法</b>：<br>A浓度、B浓度 → 混合R → (R-B)/(A-R) = A质量/B质量<br><br>凡是 A=B/C 形式的比例关系，均可看成类浓度问题<br>利用十字相乘求出的比例关系一定是 C(分母) 之比</div></div>
+
+<div class="c"><h2>三、牛吃草</h2><div class="fm">核心：原有草量 = (牛的吃速 - 草的生长速度) × 时间</div></div>
+
+<div class="c"><h2>四、容斥问题</h2><div class="fm">两集合：A∪B = A + B - A∩B<br>三集合：A∪B∪C = A+B+C - A∩B - A∩C - B∩C + A∩B∩C<br><br>①占比和超过100% → 一定有交集<br>②问至多 → 考虑「包含」，至多有「较小比重」<br>③问至少 → 考虑「相斥」，a+b-100% 或 a+b-总量</div></div>
+
+<div class="c"><h2>五、植树问题</h2><table>
+<tr><th>类型</th><th>公式</th></tr>
+<tr><td>两端不植树</td><td>总长 = 间隔 × (棵数 + 1)</td></tr>
+<tr><td>一端/环形</td><td>总长 = 间隔 × 棵数</td></tr>
+<tr><td>两端植树</td><td>总长 = 间隔 × (棵数 - 1)</td></tr>
+</table></div>
+
+<div class="c"><h2>六、行程问题</h2><div class="fm">路程 = 速度 × 时间<br>追及：路程差 = 速度差 × 时间<br>相遇：路程和 = 速度和 × 时间<br>流水：顺速 = 船速 + 水速；逆速 = 船速 - 水速</div></div>
+
+<div class="c"><h2>七、工程问题</h2><div class="fm">工作总量 = 效率 × 时间<br>设工作总量为1，效率为每天完成的比例<br>多人合作：总效率 = 各人效率之和</div></div>
+
+<div class="c"><h2>八、利润问题</h2><div class="fm">利润 = 售价 - 成本<br>利润率 = 利润 / 成本<br>折扣价 = 定价 × 折扣率</div></div>
+
+<div class="c"><h2>九、排列组合与概率</h2><div class="fm">排列：P(n,m) = n! / (n-m)!（有序）<br>组合：C(n,m) = n! / (m!(n-m)!)（无序）<br>概率 = 满足条件的情况数 / 总情况数</div></div>
+
+<div class="c"><h2>十、钟表问题</h2><div class="fm">分针速度：360°/60min = 6°/min<br>时针速度：30°/60min = 0.5°/min<br>分针追时针：5.5°/min</div></div>
+
+<div class="c"><h2>十一、最值问题</h2><div class="fm">至少…保证…：最坏情况 + 1<br>至多…不超过…：求最大值约束<br>N个数之和固定，求最大值：其余N-1个尽可能小</div></div>
+
+</body></html>
