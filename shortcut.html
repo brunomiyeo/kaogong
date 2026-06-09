@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>秒杀速查表</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+body{font-family:"微软雅黑",sans-serif;max-width:800px;margin:0 auto;padding:15px;background:#f0f2f5;line-height:1.8;font-size:15px}
+h1{color:#1B3A5C;font-size:22px;border-bottom:3px solid #1B3A5C;padding-bottom:8px}
+.c{background:#fff;padding:14px;margin:10px 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0}th{background:#1B3A5C;color:#fff;padding:6px 8px;text-align:left}td{padding:6px 8px;border-bottom:1px solid #eee}
+.tag{display:inline-block;padding:3px 10px;margin:2px;border-radius:10px;font-size:12px;color:#fff}
+.t1{background:#2E86AB}.t2{background:#27ae60}.t3{background:#e67e22}.t4{background:#8e44ad}.t5{background:#c0392b}
+b{color:#c0392b}nav{background:#1B3A5C;padding:8px 12px;border-radius:8px;margin-bottom:15px}nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:13px}
+</style></head><body>
+
+<nav><a href="index.html">🏠</a> <a href="speech.html">言语</a> <a href="logic.html">判断</a> <a href="graph.html">图推</a> <a href="quant.html">数量</a> <a href="data.html">资料</a> <a href="shortcut.html">秒杀</a></nav>
+
+<h1>⚡ 全模块秒杀速查表</h1>
+
+<div class="c">
+<h2><span class="tag t1">资料分析</span> 秒杀</h2>
+<table>
+<tr><th>场景</th><th>秒杀方法</th></tr>
+<tr><td>比重趋势</td><td>R₁>R₂ 上升 / R₁<R₂ 下降</td></tr>
+<tr><td>比重差</td><td><b>小于|R₁-R₂|</b></td></tr>
+<tr><td>增量比较</td><td>B大R大→X大</td></tr>
+<tr><td>化除为乘</td><td>|r|≤5%: A/(1+r)≈A(1-r)</td></tr>
+<tr><td>隔年增长率</td><td>R≈R₁+R₂</td></tr>
+<tr><td>选项差距大</td><td>直接估算</td></tr>
+</table>
+</div>
+
+<div class="c">
+<h2><span class="tag t2">判断推理</span> 秒杀</h2>
+<table>
+<tr><th>场景</th><th>秒杀方法</th></tr>
+<tr><td>真假话</td><td>矛盾法：找矛盾→看其余→定真假</td></tr>
+<tr><td>两个有的</td><td>找点名那句，<b>反着说</b>，人称变所有</td></tr>
+<tr><td>两个所有</td><td>找点名那句，<b>顺着说</b>，人称变所有</td></tr>
+<tr><td>3+2</td><td>找相同，相同归3做排除</td></tr>
+<tr><td>一人全对全错一对一错</td><td>找出现次数最多的为答案</td></tr>
+<tr><td>比例论证</td><td>找选项带数字的<b>分母</b>部分</td></tr>
+<tr><td>前提假设</td><td>选「<b>没他不行</b>」的选项</td></tr>
+<tr><td>逻辑推出</td><td>A→B→C = ¬C→¬B→¬A</td></tr>
+</table>
+</div>
+
+<div class="c">
+<h2><span class="tag t3">图形推理</span> 秒杀</h2>
+<table>
+<tr><th>场景</th><th>秒杀方法</th></tr>
+<tr><td>笔画数</td><td>奇点=0或2→一笔画；笔画=奇点÷2</td></tr>
+<tr><td>优先数面</td><td>面/线/笔画特征同时出现→先数面</td></tr>
+<tr><td>对称性</td><td>轴/中心/轴+中心；对称轴数量/方向</td></tr>
+<tr><td>元素相同</td><td>位置规律→平移/旋转/翻转</td></tr>
+<tr><td>元素不同</td><td>属性/数量规律</td></tr>
+<tr><td>立体展开</td><td>对立面不同时出现；公共边唯一</td></tr>
+</table>
+</div>
+
+<div class="c">
+<h2><span class="tag t4">言语理解</span> 秒杀</h2>
+<table>
+<tr><th>场景</th><th>秒杀方法</th></tr>
+<tr><td>选项关键词</td><td>选项必须有文段关键词，没有就不选</td></tr>
+<tr><td>逻辑填空</td><td>语感找备用→再推敲；纠结不如直觉</td></tr>
+<tr><td>转折/递进</td><td>转折后/递进后是重点</td></tr>
+<tr><td>并列结构</td><td>全面概括，不偏不倚</td></tr>
+<tr><td>对策句</td><td>有对策优先选对策</td></tr>
+</table>
+</div>
+
+<div class="c">
+<h2><span class="tag t5">数量关系</span> 秒杀</h2>
+<table>
+<tr><th>场景</th><th>秒杀方法</th></tr>
+<tr><td>鸡兔同笼</td><td>做错=(理想-现实)÷单个差值</td></tr>
+<tr><td>浓度十字</td><td>A/B=(r-b)/(a-r)</td></tr>
+<tr><td>植树公式</td><td>两端不植: 间隔×(棵数+1) / 环形: 间隔×棵数</td></tr>
+<tr><td>容斥</td><td>a+b>100%必有交集</td></tr>
+<tr><td>最值</td><td>至少保证=最坏情况+1</td></tr>
+</table>
+</div>
+
+<div class="c">
+<h2><span class="tag t1">速算公式</span> 汇总</h2>
+<table>
+<tr><th>公式</th><th>用法</th></tr>
+<tr><td>A=B/(1+R)</td><td>求基期</td></tr>
+<tr><td>X=AR ≈ BR/(1+R)</td><td>求增长量</td></tr>
+<tr><td>R=R₁+R₂+R₁×R₂</td><td>隔年增长率</td></tr>
+<tr><td>前期比重=M/N×(1+R₂)/(1+R₁)</td><td>前期比重</td></tr>
+<tr><td>比重差=a/B×(R₁-R₂)</td><td>两期比重差</td></tr>
+<tr><td>A/(1+r)≈A(1-r)</td><td>化除为乘 |r|≤5%</td></tr>
+<tr><td>笔画=奇点÷2</td><td>图推笔画数</td></tr>
+</table>
+</div>
+
+<div class="c">
+<h2>📌 考场时间分配</h2>
+<table>
+<tr><th>模块</th><th>题量</th><th>时间</th><th>正确率</th><th>策略</th></tr>
+<tr><td>常识判断</td><td>20</td><td>10min</td><td>60%</td><td>第一直觉，不纠结</td></tr>
+<tr><td>言语理解</td><td>40</td><td>30min</td><td>75%</td><td>基本盘，稳住</td></tr>
+<tr><td>数量关系</td><td>15</td><td>15min</td><td>50%</td><td>简单题做，难题蒙</td></tr>
+<tr><td>判断推理</td><td>40</td><td>40min</td><td>80%</td><td>基本盘，稳住</td></tr>
+<tr><td>资料分析</td><td>20</td><td>30min</td><td>80%</td><td>尽量全对</td></tr>
+<tr><td><b>合计</b></td><td><b>135</b></td><td><b>120min</b></td><td><b>70%+</b></td><td><b>上岸基本线</b></td></tr>
+</table>
+</div>
+
+</body></html>
