@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>资料分析</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+body{font-family:"微软雅黑",sans-serif;max-width:800px;margin:0 auto;padding:15px;background:#f0f2f5;line-height:1.8;font-size:15px}
+h1{color:#1B3A5C;font-size:22px;border-bottom:3px solid #1B3A5C;padding-bottom:8px}h2{color:#2E86AB;margin:22px 0 10px;font-size:17px}h3{color:#333;margin:10px 0 5px;font-size:15px}
+.c{background:#fff;padding:14px;margin:10px 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0}th{background:#1B3A5C;color:#fff;padding:5px 8px;text-align:left}td{padding:5px 8px;border-bottom:1px solid #eee}
+.fm{background:#fffde7;padding:8px 12px;border-left:3px solid #e67e22;margin:6px 0;font-size:14px}
+b{color:#c0392b}nav{background:#1B3A5C;padding:8px 12px;border-radius:8px;margin-bottom:15px}nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:13px}
+</style></head><body>
+
+<nav><a href="index.html">🏠</a> <a href="speech.html">言语</a> <a href="logic.html">判断</a> <a href="graph.html">图推</a> <a href="quant.html">数量</a> <a href="data.html">资料</a> <a href="shortcut.html">秒杀</a></nav>
+
+<h1>📊 资料分析</h1>
+<p style="color:#888;font-size:12px">目标：20题 · 30分钟 · 正确率80%+（尽量全对）</p>
+
+<div class="c"><h2>一、基础概念</h2>
+<table>
+<tr><th>概念</th><th>定义</th><th>易混</th></tr>
+<tr><td>基期A</td><td>与谁相比，谁为基期</td><td></td></tr>
+<tr><td>现期B</td><td>当前统计周期</td><td></td></tr>
+<tr><td>增长量X</td><td>绝对差值（增加多少）</td><td></td></tr>
+<tr><td>增长率R</td><td>相对差异（增加快慢）</td><td>=增速=增幅</td></tr>
+<tr><td>变化幅度</td><td>看增速<b>绝对值</b></td><td>与增长幅度不同</td></tr>
+<tr><td>同比</td><td>基期为历史同期</td><td></td></tr>
+<tr><td>环比</td><td>基期为上个统计周期</td><td></td></tr>
+<tr><td>比重</td><td>部分/整体，单位相同</td><td></td></tr>
+<tr><td>平均</td><td>总量/份数，单位不同</td><td>均前每后做分母</td></tr>
+<tr><td>倍数</td><td>=增长率+1</td><td>A是B的5倍=A比B多4倍</td></tr>
+<tr><td>翻番</td><td>翻一番=2倍</td><td>翻n番=2^n倍</td></tr>
+<tr><td>名义增长率</td><td>实际增长率+通货膨胀率</td><td></td></tr>
+</table>
+</div>
+
+<div class="c"><h2>二、ABRX 四量关系</h2>
+<div class="fm">A=前期 | B=本期 | X=变化量 | R=变化率<br><br>
+<b>求X</b>：R>10%→415份数法 / R<10%→假设分配法 / R<5%→X≈AR≈BR<br>
+<b>求A</b>：A=B/(1+R)<br>
+<b>求R</b>：R=X/A<br><br>
+<b>隔年增长率（笑脸公式）</b><br>
+R = R₁+R₂+R₁×R₂ ≈ R₁+R₂<br><br>
+<b>比值增长率</b>：(R₁-R₂)/(1+R₂)<br>
+用于「人均」「单位面积」「平均」等关键词
+</div>
+</div>
+
+<div class="c"><h2>三、比重类</h2>
+<div class="fm"><b>本期比重</b> = 部分 / 整体<br><br>
+<b>前期比重</b> = 本期比重 × (1+整体R) / (1+部分R)<br>
+= 本期比重 × (1+R₂)/(1+R₁) 反过来<br><br>
+<b>比重趋势秒杀</b>：R₁(部分) > R₂(整体) → 上升<br><br>
+<b>比重差秒杀</b>：比重差 < |R₁-R₂|<br>
+精确公式：比重差 = a/B × (R₁-R₂)<br><br>
+<b>比值增长率 vs 比重差</b><br>
+比值增长率：R=X/A，单位不同，选项%，有「人均」「平均增长率」字样<br>
+比重差：A/B-a/b，单位相同，选项百分点，有「占…比重」字样
+</div>
+</div>
+
+<div class="c"><h2>四、比较类</h2>
+<div class="fm"><b>增量秒杀</b>：B越大R越大 → X越大<br><br>
+<b>双线法</b>：R=X/A<br>
+分母变大分子变小 → 分数变小<br>
+分子长的快 → 分数变大<br><br>
+<b>姚潘追及思想</b>：<br>
+高的增量更大 → 差距拉大<br>
+矮的增量更大 → 差距缩小<br><br>
+<b>增速变化表述</b>：<br>
+增幅扩大5点 → 去年=今年-5%<br>
+降幅扩大5点 → 去年=-(|今年|-5%)
+</div>
+</div>
+
+<div class="c"><h2>五、平均类</h2>
+<div class="fm"><b>均前每后</b>做分母（平均每也是每）<br><br>
+<b>年均增长量</b> = (末期-基期) / n<br>
+<b>年均增长率</b>：(1+R)^n = 末期/基期<br>
+R很小且选项接近时：1+nR ≈ 1+nR<br><br>
+闰年：能被4整除（整百年需被400整除）<br>
+2011年初到2018年末 = 2010年末到2018年末，n=8
+</div>
+</div>
+
+<div class="c"><h2>六、盐水类（十字交叉法）</h2>
+<div class="fm">A部分a + B部分b → 混合浓度r<br><b>A/B = (r-b)/(a-r)</b><br><br>
+适用：①A=B/C ②整体分两部分 ③求出来的比例是<b>前期之比</b><br><br>
+例：20%和30%配成22% → 8%:2% = 4:1</div>
+</div>
+
+<div class="c"><h2>七、速算技巧</h2>
+<table>
+<tr><th>技巧</th><th>用法</th><th>场景</th></tr>
+<tr><td><b>化除为乘</b></td><td>|r|≤5%: A/(1+r)≈A(1-r)</td><td>求基期</td></tr>
+<tr><td><b>415份数法</b></td><td>R=25%→基期4份,X=1份,本期5份</td><td>R>10%</td></tr>
+<tr><td><b>假设分配法</b></td><td>X=AR，画分配树</td><td>R<10%万能</td></tr>
+<tr><td><b>截位法</b></td><td>除法直接舍弃无需四舍五入</td><td>选项差距大</td></tr>
+<tr><td><b>十字交叉</b></td><td>混合→求量之比</td><td>混合增长率</td></tr>
+<tr><td><b>高位叠加</b></td><td>加法从高位加起</td><td>精确求和</td></tr>
+<tr><td><b>削峰填谷</b></td><td>找基准值，根据偏离求</td><td>求平均</td></tr>
+<tr><td><b>乘法拆分</b></td><td>45%=50%-5%, 15%=10%+5%</td><td>百分数乘法</td></tr>
+<tr><td><b>尾数法</b></td><td>精确求和差</td><td>选项末位不同</td></tr>
+</table>
+</div>
+
+<div class="c"><h2>八、特殊考点</h2>
+<div class="fm"><b>拉动增长</b> = 部分增量 / 整体前期<br>
+<b>贡献率</b> = 部分增量 / 整体增量<br><br>
+<b>容斥</b>：a+b>100%必有交集；交集最少=a+b-100%；交集是区间</div></div>
+
+</body></html>
